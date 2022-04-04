@@ -1,0 +1,109 @@
+<%- include('head.ejs')%>
+<style>
+  .item1 {
+    grid-area: header;
+    height: 200px;
+  }
+  .item2 {
+    grid-area: menu;
+    height: 800px;
+  }
+  .item3 {
+    grid-area: main;
+    height: auto;
+  }
+  .item4 {
+    grid-area: right;
+    height: 450px;
+  }
+  p{
+    padding-left: 2%;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+            '. header header header header .'
+            'menu main main main main right'
+            'menu main main main main right';
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+  }
+
+  .grid-container > div {
+    background-color: rgb(242, 242, 242);
+    text-align: left;
+    font-size: 30px;
+    border-color: black;
+    border-style: solid;
+  }
+  .block {
+    display: block;
+    width: 96%;
+    background-color: darkgrey;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    padding: 100px;
+    margin: 2%;
+  }
+  .blockTrending {
+    display: inline;
+    position: center;
+    width: 100px;
+    height: 100px;
+    background-color: darkgrey;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    padding: 20px;
+  }
+  .blockRight {
+    display: block;
+    width: 96%;
+    background-color: darkgrey;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin: 2%;
+    padding: 30px;
+  }
+  .block:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .blockRight:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .blockTrending:hover{
+    background-color: #ddd;
+    color: black;
+  }
+</style>
+<div class="grid-container">
+  <div class="item1">
+    <p>Trending:</p>
+    <button class="blockTrending">Block Button</button>
+    <button class="blockTrending">Block Button</button>
+    <button class="blockTrending">Block Button</button>
+    <button class="blockTrending">Block Button</button>
+  </div>
+  <div class="item2" style="margin-left: 20px">
+    <p>Ads</p>
+  </div>
+  <div class="item3">
+    <p>From forums you watch:</p>
+    <button class="block" onclick="window.location.href = 'http://localhost:3000/post_name'">Block Button</button>
+    <button class="block">Block Button</button>
+    <button class="block">Block Button</button>
+    <button class="block">Block Button</button>
+  </div>
+  <div class="item4">
+    <p>Favorites:</p>
+    <button class="blockRight">Block Button</button>
+    <button class="blockRight">Block Button</button>
+    <button class="blockRight">Block Button</button>
+    <button class="blockRight">Block Button</button>
+  </div>
+</div>
