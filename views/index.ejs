@@ -48,15 +48,14 @@
     margin: 2%;
   }
   .blockTrending {
-    display: inline;
-    position: center;
-    width: 100px;
-    height: 100px;
+    display: block;
+    height: 125px;
+    width: 125px;
     background-color: darkgrey;
     font-size: 16px;
     cursor: pointer;
     text-align: center;
-    padding: 20px;
+    margin: auto;
   }
   .blockRight {
     display: block;
@@ -80,10 +79,17 @@
     background-color: #ddd;
     color: black;
   }
+  .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
 <div class="grid-container">
-  <div class="item1">
-    <p>Trending:</p>
+
+  <p>Trending</p>
+  <div class="item1 centered">
+    <button class="blockTrending">Block Button</button>
     <button class="blockTrending">Block Button</button>
     <button class="blockTrending">Block Button</button>
     <button class="blockTrending">Block Button</button>
@@ -91,6 +97,7 @@
   </div>
   <div class="item2" style="margin-left: 20px">
     <p>Ads</p>
+    <button class="blockRight">Block Button</button>
   </div>
   <div class="item3">
     <p>From forums you watch:</p>
